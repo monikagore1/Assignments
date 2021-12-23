@@ -1,0 +1,199 @@
+
+MOGORE@LIN51018350 MINGW64 ~
+$ cd Desktop
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop
+$ mkdir project_dir
+mkdir: cannot create directory ‘project_dir’: File exists
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop
+$ git rm -r project dir
+fatal: not a git repository (or any of the parent directories): .git
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop
+$ rm -r project_dir
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop
+$ mkdir project_dir
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop
+$ cd project_dir
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir
+$ git init
+Initialized empty Git repository in C:/Users/MOGORE/Desktop/project_dir/.git/
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ ls index.html
+ls: cannot access 'index.html': No such file or directory
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ ls index.html
+index.html
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git add index.html
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git commit -m "first basic program"
+[master (root-commit) d70446d] first basic program
+ 1 file changed, 14 insertions(+)
+ create mode 100644 index.html
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status --short M index.html
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git commit -a -m "updated index.html by adding some lines"
+[master 6f83c81] updated index.html by adding some lines
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ ls info.txt
+info.txt
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ ls .gitignore
+.gitignore
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ ls log.txt
+log.txt
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git add .gitignore
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git add info.txt
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   info.txt
+
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git rm --cached info.txt
+rm 'info.txt'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git commit -a -m "updated index.html with adding 1 line"
+[master 03feead] updated index.html with adding 1 line
+ 2 files changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git log
+commit 03feeadff8763e24d134ff01209627d6d245b713 (HEAD -> master)
+Author: Gore <monika.gore@capgemini.com>
+Date:   Fri Dec 10 16:09:20 2021 +0530
+
+    updated index.html with adding 1 line
+
+commit 6f83c810a888ce904a39d04200085445e74efcac
+Author: Gore <monika.gore@capgemini.com>
+Date:   Fri Dec 10 15:56:40 2021 +0530
+
+    updated index.html by adding some lines
+
+commit d70446d31620946c82d54e49bf05767c6fcbd80e
+Author: Gore <monika.gore@capgemini.com>
+Date:   Fri Dec 10 15:52:05 2021 +0530
+
+    first basic program
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git commit -m "first assignments"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git add info.txt
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git commit -m "my first assignment"
+[master 8cd8903] my first assignment
+ 1 file changed, 1 insertion(+)
+ create mode 100644 info.txt
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$ git revert head
+[master f9cf2b6] Revert "my first assignment"
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 info.txt
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/project_dir (master)
+$

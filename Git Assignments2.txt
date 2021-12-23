@@ -1,0 +1,184 @@
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (css-assignments)
+$ git add .
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (css-assignments)
+$ git commit -m "updating changes in README.txt file"
+[css-assignments b3c6332] updating changes in README.txt file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (css-assignments)
+$ git status
+On branch css-assignments
+nothing to commit, working tree clean
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git add .
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git commit -m "updating changes in README.txt file"
+[master 705ff8c] updating changes in README.txt file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (css-assignments)
+$ git add .
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (css-assignments)
+$ git commit
+[css-assignments 8f5c9b2] making changes in m1.css file and m2.css file
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git merge css-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master|MERGING)
+$ git add README.txt
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        new file:   README.css
+        modified:   README.txt
+        new file:   m1.css
+        new file:   m2.css
+
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master|MERGING)
+$ git commit -m "adding changes in README.txt file"
+[master f9a7690] adding changes in README.txt file
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git merge css-assignments
+Already up to date.
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git branch -d css-assignments
+Deleted branch css-assignments (was 8f5c9b2).
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git branch js-assignments
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git commit
+On branch js-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        m1.js
+        m2.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git add .
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git commit
+[js-assignments e511ee0] making changes in m1.js file and m2.js file
+ 2 files changed, 2 insertions(+)
+ create mode 100644 m1.js
+ create mode 100644 m2.js
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git status
+On branch js-assignments
+nothing to commit, working tree clean
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git add .
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git commit
+[master b8fc369]  adding changes at 3 rd line of README.txt file
+ 1 file changed, 1 insertion(+)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git commit
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.css
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git add .
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git commit
+[js-assignments ed6c2b8] updating changes in README.css and file.txt
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git status
+On branch js-assignments
+nothing to commit, working tree clean
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git merge js-assignments
+Merge made by the 'ort' strategy.
+ README.css | 2 +-
+ file.txt   | 3 ++-
+ m1.js      | 1 +
+ m2.js      | 1 +
+ 4 files changed, 5 insertions(+), 2 deletions(-)
+ create mode 100644 m1.js
+ create mode 100644 m2.js
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$ git branch -d js-assignments
+Deleted branch js-assignments (was ed6c2b8).
+
+MOGORE@LIN51018350 MINGW64 ~/Desktop/assignments (master)
+$
